@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="DocBiz Tools — browser-based calculators and business document generators.">
+  <title>DocBiz Tools — Business Calculators & Documents</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#" data-tab="home">
+      <img src="assets/docbiz-logo.png" alt="DocBiz Tools">
+    </a>
+    <div class="header-actions">
+      <button class="icon-btn" id="themeBtn" title="Toggle dark mode" aria-label="Toggle dark mode">◐</button>
+      <button class="icon-btn" id="comfortBtn" title="Eye Comfort mode" aria-label="Toggle Eye Comfort mode">◉</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+  </div>
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="home">Home</button>
+    <button class="tab" data-tab="calculators">🧮 Calculators</button>
+    <button class="tab" data-tab="documents">📄 Business Documents</button>
+    <button class="tab" data-tab="india">🇮🇳 India Business</button>
+    <button class="tab" data-tab="trade">📦 Import & Export</button>
+  </nav>
+</header>
+
+<main>
+<section class="hero page active" id="home">
+  <div class="hero-copy">
+    <span class="eyebrow">FAST • PRIVATE • BROWSER-FIRST</span>
+    <h1>Do the work.<br><span>Skip the software bloat.</span></h1>
+    <p>Practical calculators and business document tools that run directly in your browser. No account required for these tools.</p>
+    <div class="hero-actions">
+      <button class="primary" data-tab="calculators">Explore calculators</button>
+      <button class="secondary" data-tab="documents">Create a document</button>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="hero-orbit"><span>₹</span><span>%</span><span>PDF</span><span>GST</span></div>
+    <strong>Built for everyday business work</strong>
+    <small>Calculations happen on your device. Document drafts stay in this browser unless you choose to save/print them.</small>
+  </div>
+  <div class="privacy-strip">
+    <span>🔒 Browser-first</span><span>⚡ No backend required</span><span>🖨️ Print / Save as PDF</span><span>📱 Mobile friendly</span>
+  </div>
+</section>
+
+<section class="page" id="calculators">
+  <div class="section-head"><div><span class="eyebrow">CALCULATORS</span><h2>Business numbers, without the spreadsheet juggling.</h2></div><input id="toolSearch" class="search" placeholder="Search tools..." autocomplete="off"></div>
+  <div class="tool-grid" id="calculatorGrid"></div>
+</section>
+
+<section class="page" id="documents">
+  <div class="section-head"><div><span class="eyebrow">BUSINESS DOCUMENTS</span><h2>Create, preview and print professional documents.</h2></div></div>
+  <div class="tool-grid" id="documentGrid"></div>
+</section>
+
+<section class="page" id="india">
+  <div class="section-head"><div><span class="eyebrow">INDIA BUSINESS</span><h2>Everyday Indian business utilities.</h2></div></div>
+  <div class="tool-grid" id="indiaGrid"></div>
+</section>
+
+<section class="page" id="trade">
+  <div class="section-head"><div><span class="eyebrow">IMPORT & EXPORT</span><h2>Simple tools for trade paperwork and costing.</h2></div></div>
+  <div class="tool-grid" id="tradeGrid"></div>
+</section>
+</main>
+
+<div class="modal-backdrop" id="modalBackdrop" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-head"><h3 id="modalTitle"></h3><button class="close" id="closeModal">×</button></div>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<footer>
+  <div><strong>DocBiz Tools</strong><span>Business Tools • Document Solutions</span></div>
+  <small>Calculation and document-formatting assistance only. Verify applicable tax, legal and accounting requirements before relying on a document for filing or compliance.</small>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
